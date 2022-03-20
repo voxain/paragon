@@ -1,0 +1,56 @@
+{
+    "observer": {
+        "name": "Observer",
+        "description": "Redstone component capable of detecting block updates",
+        "category": "redstone",
+        "images": [],
+        "seller": "paragon",
+        "price": 1,
+        "amount": 12
+    },
+    "redstone_lamp": {
+        "name": "Redstone Lamp",
+        "description": "A warrior against darkness in your contraptions",
+        "category": "redstone",
+        "images": [],
+        "seller": "paragon",
+        "price": 1,
+        "amount": 12
+    },
+    "redstone_block": {
+        "name": "Redstone Block",
+        "description": "A block composed of pure redstone energy.",
+        "category": "redstone",
+        "images": [],
+        "seller": "paragon",
+        "price": 1,
+        "amount": 12
+    },
+    "ice": {
+        "name": "Ice",
+        "description": "Stackable water buckets",
+        "category": "blocks", 
+        "images": [],
+        "seller": "paragon",
+        "price": 1,
+        "amount": 32
+    },
+    "moss": {
+        "name": "Moss Block",
+        "description": "Not good at building? Bonemeal this.",
+        "category": "blocks", 
+        "images": [],
+        "seller": "paragon",
+        "price": 1,
+        "amount": 32
+    },
+    "gold_block": {
+        "name": "Gold Block",
+        "description": "Piglins love it!",
+        "category": "blocks", 
+        "images": [],
+        "seller": "paragon",
+        "price": 1,
+        "amount": 10
+    }
+}
