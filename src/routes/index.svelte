@@ -1,7 +1,8 @@
 <script context="module">
+
+    // Fetch list of popular products
     export async function load({fetch}){
-        let productJSON = await fetch('/api/products')
-        console.log(productJSON)
+        let productJSON = await fetch('/api/products?filter=popular')
         productJSON = await productJSON.json()
             return {
                 props: {

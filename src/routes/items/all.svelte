@@ -1,7 +1,8 @@
 <script context="module">
+
+    // Fetch list of all products
     export async function load({fetch}){
         let productJSON = await fetch('/api/products')
-        console.log(productJSON)
         productJSON = await productJSON.json()
             return {
                 props: {
