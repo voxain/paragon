@@ -20,7 +20,7 @@ npm run dev -- --open
 The default http port for this app is 3000.
 
 **Wait, don't I need a database?**
-No, you don't. I for my part really don't like working with databases, and for a small project such as this one, storing data within JSON files is more than sufficient. Should it turn out to have biger needs in the future, room for expansion is almost certainly granted.
+No, you don't. I for my part really don't like working with databases, and for a small project such as this one, storing data within JSON files is more than sufficient. Should it turn out to have bigger needs in the future, room for expansion is almost certainly granted.
 
 ------
 
