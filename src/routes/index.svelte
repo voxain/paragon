@@ -18,7 +18,7 @@
     import { fade } from 'svelte/transition';
     import ListCards from '../components/listCards.svelte';
     export let products;
-    products = Object.entries(products.productList);
+    products = Object.entries(products);
 </script>
 
 <div out:fade={{duration: 200}} class="w-full mb-14 mt-8 h-96 pb-4 2xl:h-[40rem] overflow-x-auto flex flex-row snap-x snap-mandatory">

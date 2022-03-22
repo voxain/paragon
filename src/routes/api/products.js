@@ -16,12 +16,12 @@ export function get( {url} ) {
     /* -------------------------------------------------------------------------- */
 
 
-    /* ----------------------------- FILTER LOGIC ----------------------------- */
+    /* ------------------------------ FILTER LOGIC ------------------------------ */
     /**
      * TODO: Exclude out of stock items by default
      *
      * * Planned filter properties
-     * stock, price, category, new
+     * stock, price, category, new, items on sale, popular
      */
 
     if(url.searchParams.has('filter')){
@@ -30,7 +30,7 @@ export function get( {url} ) {
             // POPULAR filter: pick out some random pseudo items because I don't care   
             case 'popular':
                 productList = { observer: productList.observer };
-                
+
         }
     }
 
@@ -38,16 +38,31 @@ export function get( {url} ) {
     /* ----------------------------- GROUPING LOGIC ----------------------------- */
     /**
      * * Planned grouping
-     * category, (color?)
+     * category
      */
 
     //TODO: Implement grouping logic and URL parameters
+
+    if(url.searchParams.has('group')){
+        switch(url.searchParams.get('group')){
+
+            // CATEGORY Grouping: iterate through items and create nested object for cat. if not present
+            //TODO: Create Category documentation & Info endpoint, which will give detailed data by ID
+            case 'category':
+                let categoryList = {};
+                Object.entries(productList).forEach(product => {
+                    if( !categoryList[product[1].category] ) categoryList[product[1].category] = [];
+                    categoryList[product[1].category].push(product);
+                });
+                productList = categoryList;
+        }
+    }
 
 
     /* ------------------------------ SORTING LOGIC ----------------------------- */
     /**
      * * Planned sorting options
-     * Price (low to high), price (high to low), availability
+     * Price (low to high), price (high to low), availability, highest discount
      */
 
     //TODO: Implement sorting logic and URL parameters
@@ -55,7 +70,7 @@ export function get( {url} ) {
 
     return {
         body: {
-            productList: productList
+            ...productList
         }
     };
 }

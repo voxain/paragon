@@ -14,7 +14,7 @@
 
 <script>
     export let products;
-    products = Object.entries(products.productList);
+    products = Object.entries(products);
     import ListCards from '/src/components/listCards.svelte';
 </script>
 

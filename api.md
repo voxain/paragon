@@ -45,7 +45,22 @@ Accepted `{filters}`:
 ### ?group={value}
 ###### WIP
 Accepted `{values}`:
-* ~~`category` - will give back JSON Product Objects within an object, which the key of is the name of the category.~~
+* `category` - will give back a JSON array which will look something like this:
+```json
+{
+    "redstone": [
+        [
+            "observer", //id of the product
+            {  
+                "name": "Observer", //other properties
+                ...
+            }
+        ],
+        ...
+    ],
+    ...
+}
+```
 
 <br />
 
