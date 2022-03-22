@@ -1,5 +1,6 @@
 <script>
     export let products;
+    import { fly } from 'svelte/transition';
 </script>
 
 {#each products as product, index}

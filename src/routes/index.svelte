@@ -15,7 +15,7 @@
 </script>
 
 <script>
-    import { fade, fly } from 'svelte/transition';
+    import { fade } from 'svelte/transition';
     import ListCards from '../components/listCards.svelte';
     export let products;
     products = Object.entries(products.productList);
