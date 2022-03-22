@@ -50,6 +50,7 @@ export function get( {url} ) {
             //TODO: Create Category documentation & Info endpoint, which will give detailed data by ID
             case 'category':
                 let categoryList = {};
+                // dont even ask me whats going on over here. only god knows.
                 Object.entries(productList).forEach(product => {
                     if( !categoryList[product[1].category] ) categoryList[product[1].category] = [];
                     categoryList[product[1].category].push(product);
