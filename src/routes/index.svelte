@@ -1,5 +1,7 @@
 <script context="module">
 
+    //! better way to centralize this request (within listCards mayeb?)
+
     // Fetch list of popular products
     export async function load({fetch}){
         let productJSON = await fetch('/api/products?filter=popular')
