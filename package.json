@@ -2,7 +2,7 @@
   "name": "paragon-neo",
   "version": "0.0.1",
   "scripts": {
-    "dev": "svelte-kit dev --host",
+    "dev": "svelte-kit dev --host --port 80",
     "build": "svelte-kit build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",

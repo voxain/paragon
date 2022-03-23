@@ -11,6 +11,7 @@ export function get( {url} ) {
     let productList = JSON.parse( productsJSON );
 
 
+
     /* -------------------------------------------------------------------------- */
     /*                         FILTERS, GROUPS, & SORTING                         */
     /* -------------------------------------------------------------------------- */
@@ -32,6 +33,15 @@ export function get( {url} ) {
                 productList = { observer: productList.observer };
 
         }
+    }
+
+    // CATEGORY filter
+    if(url.searchParams.has('category')){
+        let filteredList = {}
+        productList = Object.keys(productList).map(p => {
+            if(productList[p].category == url.searchParams.get('category')) filteredList[p] = productList[p];
+        });
+        productList = filteredList;
     }
 
 

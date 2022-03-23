@@ -71,3 +71,16 @@ Accepted `{values}`:
 * ~~`price-htl` - same as above, but high to low~~
 * ~~`stock` - shows items with highest stock first~~
 * ~~`discount` - shows items with highest discount first~~
+
+------
+## /api/product/{id}
+###### GET
+
+Returns: **JSON Object**
+```json
+{
+    "name": "Observer",
+    "category": "redstone",
+    ...
+}
+```

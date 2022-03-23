@@ -4,10 +4,13 @@
 </script>
 
 {#each products as product, index}
-    <div in:fly={{y:20, delay: 200+50*index, duration: 300}} class="card w-96 bg-base-100 flex-shrink-0 m-4 shadow-xl snap-start scroll-mx-3">
-        <figure>
-            <img src="/products/rendered/{product[0]}.png" alt="Shoes" class="" />
-        </figure>
+
+    <div in:fly={{y:20, delay: 300+50*index, duration: 300}} out:fly={{y:20, delay: 50*index, duration: 300}} class="card w-96 bg-base-100 flex-shrink-0 m-4 shadow-xl snap-start scroll-mx-3">
+        <a href="/product/{product[0]}">
+          <figure>
+            <img src="/products/rendered/{product[0]}.png" alt="{product[1].name}" class="" />
+          </figure>
+        </a>
         <div class="card-body">
           <h2 class="card-title">{product[1].name}</h2>
           <p>{product[1].description}</p>
@@ -17,9 +20,9 @@
                   {product[1].price} for {product[1].amount}
               </div>
             <div class="flex-1"></div>
-            <button class="btn btn-link">Details</button>
+            <a href="/product/{product[0]}"><button class="btn btn-link">Details</button></a>
             <button class="btn btn-primary">Add to cart</button>
           </div>
         </div>
       </div>
-    {/each}
+{/each}

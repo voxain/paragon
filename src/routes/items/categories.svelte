@@ -17,6 +17,4 @@
     products = Object.entries(products);
 </script>
 
-<div class="flex flex-row flex-wrap justify-center">
 <GroupCards category={products} />
-</div>
